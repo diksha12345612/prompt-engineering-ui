@@ -1,0 +1,340 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Single Page Demo</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- ================= NAVIGATION ================= -->
+  <nav id="main-nav" class="bg-white shadow-sm">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <!-- Brand -->
+        <a href="#" class="text-xl font-semibold text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded">
+          BrandName
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex md:items-center md:space-x-8">
+          <a href="#" class="text-gray-700 hover:text-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded">Home</a>
+          <a href="#" class="text-gray-700 hover:text-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded">Services</a>
+          <a href="#" class="text-gray-700 hover:text-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded">Pricing</a>
+          <a href="#" class="text-gray-700 hover:text-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded">Contact</a>
+          <a href="#" class="ml-4 inline-block rounded bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-600">
+            Get Started
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-menu"
+          class="md:hidden focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded p-2 text-gray-700">
+          <!-- Menu Icon -->
+          <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <!-- Close Icon -->
+          <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+      <div class="space-y-2 bg-white shadow rounded-2xl p-4">
+        <a href="#" class="block text-gray-700 hover:text-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded">Home</a>
+        <a href="#" class="block text-gray-700 hover:text-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded">Services</a>
+        <a href="#" class="block text-gray-700 hover:text-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded">Pricing</a>
+        <a href="#" class="block text-gray-700 hover:text-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded">Contact</a>
+        <a href="#" class="block rounded bg-indigo-600 px-4 py-2 text-center text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-600">
+          Get Started
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= HERO ================= -->
+  <section id="hero" class="py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+      <!-- Text Content -->
+      <div>
+        <span class="inline-block mb-3 rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700">
+          New — 2025
+        </span>
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight text-gray-900">
+          Build Stronger Digital Experiences
+        </h1>
+        <p class="mt-4 text-lg text-gray-600">
+          Powerful tools designed to elevate your workflow and engage your audience.
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row sm:space-x-4 space-y-3 sm:space-y-0">
+          <a href="#features"
+            class="inline-block rounded bg-indigo-600 px-6 py-3 text-white font-medium hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-600">
+            Get Started
+          </a>
+          <a href="#contact-form"
+            class="inline-block rounded border border-gray-300 px-6 py-3 text-gray-700 font-medium hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-600">
+            Learn More
+          </a>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div>
+        <img
+          src="https://source.unsplash.com/collection/190727/800x600"
+          alt="Abstract digital illustration"
+          class="w-full h-auto rounded-xl shadow-md">
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURES ================= -->
+  <section id="features" class="py-20 bg-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10">Our Features</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+        
+        <!-- Card 1 -->
+        <div class="rounded-2xl border bg-white p-6 shadow hover:-translate-y-1 hover:shadow-md transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-600 mb-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 7h18M3 12h18M3 17h18"/>
+          </svg>
+          <h3 class="text-lg font-medium text-gray-900">Streamlined Workflow</h3>
+          <p class="text-gray-600 mt-1">Optimize your daily operations seamlessly.</p>
+          <a href="#" class="mt-3 inline-block text-indigo-600 hover:text-indigo-700 font-medium text-sm">Learn more →</a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="rounded-2xl border bg-white p-6 shadow hover:-translate-y-1 hover:shadow-md transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-600 mb-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m9-9H3"/>
+          </svg>
+          <h3 class="text-lg font-medium text-gray-900">Scalable Tools</h3>
+          <p class="text-gray-600 mt-1">Built to grow with your business effortlessly.</p>
+          <a href="#" class="mt-3 inline-block text-indigo-600 hover:text-indigo-700 font-medium text-sm">Learn more →</a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="rounded-2xl border bg-white p-6 shadow hover:-translate-y-1 hover:shadow-md transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-600 mb-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 9a4.5 4.5 0 11-9 0m9 0a4.5 4.5 0 11-9 0m9 0v6a4.5 4.5 0 01-9 0V9"/>
+          </svg>
+          <h3 class="text-lg font-medium text-gray-900">User Insights</h3>
+          <p class="text-gray-600 mt-1">Understand your audience with clarity.</p>
+          <a href="#" class="mt-3 inline-block text-indigo-600 hover:text-indigo-700 font-medium text-sm">Learn more →</a>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="rounded-2xl border bg-white p-6 shadow hover:-translate-y-1 hover:shadow-md transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-600 mb-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h18v18H3z"/>
+          </svg>
+          <h3 class="text-lg font-medium text-gray-900">Robust Security</h3>
+          <p class="text-gray-600 mt-1">Keep your data safe with industry-leading protection.</p>
+          <a href="#" class="mt-3 inline-block text-indigo-600 hover:text-indigo-700 font-medium text-sm">Learn more →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT FORM ================= -->
+  <section id="contact-form" class="py-20 bg-gray-50">
+    <div class="mx-auto max-w-xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8">Contact Us</h2>
+
+      <div id="success-message" class="hidden mb-4 p-4 bg-green-100 text-green-800 rounded-lg">
+        Your message has been sent successfully!
+      </div>
+
+      <form id="leadForm" novalidate class="space-y-6">
+
+        <!-- Full Name -->
+        <div>
+          <label for="fullName" class="block font-medium text-gray-800">Full Name *</label>
+          <input type="text" id="fullName" name="fullName" required
+            class="mt-1 w-full rounded-lg border-gray-300 focus:border-indigo-600 focus:ring-indigo-600" />
+          <p class="mt-1 text-sm text-red-600 hidden"></p>
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label for="email" class="block font-medium text-gray-800">Email *</label>
+          <input type="email" id="email" name="email" required
+            pattern="^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$"
+            class="mt-1 w-full rounded-lg border-gray-300 focus:border-indigo-600 focus:ring-indigo-600" />
+          <p class="mt-1 text-sm text-red-600 hidden"></p>
+        </div>
+
+        <!-- Company -->
+        <div>
+          <label for="company" class="block font-medium text-gray-800">Company (optional)</label>
+          <input type="text" id="company" name="company"
+            class="mt-1 w-full rounded-lg border-gray-300 focus:border-indigo-600 focus:ring-indigo-600" />
+        </div>
+
+        <!-- Message -->
+        <div>
+          <label for="message" class="block font-medium text-gray-800">Message *</label>
+          <textarea id="message" name="message" required rows="5"
+            class="mt-1 w-full rounded-lg border-gray-300 focus:border-indigo-600 focus:ring-indigo-600"></textarea>
+          <p class="mt-1 text-sm text-red-600 hidden"></p>
+        </div>
+
+        <button type="submit"
+          class="w-full rounded-lg bg-indigo-600 py-3 text-white font-medium hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-600">
+          Submit
+        </button>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer id="site-footer" class="bg-gray-900 text-gray-300 py-16">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+      <!-- Logo -->
+      <div>
+        <h3 class="text-xl font-semibold text-white">BrandName</h3>
+        <p class="mt-3 text-gray-400 text-sm">Building better digital experiences.</p>
+
+        <div class="flex space-x-4 mt-6">
+          <!-- Twitter -->
+          <a href="#" class="hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 19c7.5 0 11.6-6.2 11.6-11.6v-.5A8.3 8.3 0 0022 4.3a8.1 8.1 0 01-2.3.6 4.1 4.1 0 001.8-2.3 8.2 8.2 0 01-2.6 1A4.1 4.1 0 0015.3 2a4.1 4.1 0 00-4 5A11.7 11.7 0 013 3.1a4.1 4.1 0 001.3 5.5A4.1 4.1 0 013 8v.1a4.1 4.1 0 003.3 4A4.1 4.1 0 014 12a4.1 4.1 0 003.8 2.8A8.3 8.3 0 012 17.5a11.7 11.7 0 006 1.7"/>
+            </svg>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="#" class="hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M4.98 3.5A2.5 2.5 0 102.5 6a2.5 2.5 0 002.48-2.5zM2.5 21.5h5v-15h-5zM9.5 9h4.8v2h.1a5.2 5.2 0 014.6-2.5c4.9 0 5.8 3.2 5.8 7.4v7.6h-5v-6.7c0-1.6 0-3.6-2.2-3.6s-2.5 1.7-2.5 3.5v6.8h-5z"/>
+            </svg>
+          </a>
+
+          <!-- GitHub -->
+          <a href="#" class="hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2a10 10 0 00-3.2 19.5c.5.1.7-.2.7-.5v-2c-2.8.6-3.3-1.3-3.3-1.3a2.6 2.6 0 00-1-1.4c-.8-.6.1-.6.1-.6a2 2 0 011.5 1 2.1 2.1 0 002.8.8 2.1 2.1 0 01.6-1.3c-2.2-.3-4.5-1.1-4.5-5a3.9 3.9 0 011-2.7 3.7 3.7 0 01.1-2.6s.8-.3 2.7 1a9.3 9.3 0 015 0c1.9-1.3 2.7-1 2.7-1a3.7 3.7 0 01.1 2.6 3.9 3.9 0 011 2.7c0 3.9-2.3 4.6-4.5 5a2.4 2.4 0 01.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0012 2z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Product Links -->
+      <div>
+        <h4 class="text-white font-semibold mb-4">Product</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded">Overview</a></li>
+          <li><a href="#" class="hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded">Features</a></li>
+          <li><a href="#" class="hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded">Pricing</a></li>
+          <li><a href="#" class="hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded">Releases</a></li>
+        </ul>
+      </div>
+
+      <!-- Company Links -->
+      <div>
+        <h4 class="text-white font-semibold mb-4">Company</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded">About Us</a></li>
+          <li><a href="#" class="hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded">Careers</a></li>
+          <li><a href="#" class="hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded">Press</a></li>
+          <li><a href="#" class="hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Resources Links -->
+      <div>
+        <h4 class="text-white font-semibold mb-4">Resources</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded">Blog</a></li>
+          <li><a href="#" class="hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded">Help Center</a></li>
+          <li><a href="#" class="hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded">Guides</a></li>
+          <li><a href="#" class="hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded">Community</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="mt-12 text-center text-gray-500 text-sm">
+      © 2025 BrandName. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- ================= JS ================= -->
+  <script>
+    /* ---- Mobile Menu Toggle ---- */
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('icon-open');
+    const iconClose = document.getElementById('icon-close');
+
+    menuBtn.addEventListener('click', () => {
+      const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', !expanded);
+      mobileMenu.classList.toggle('hidden');
+      iconOpen.classList.toggle('hidden');
+      iconClose.classList.toggle('hidden');
+    });
+
+    /* ---- Contact Form Validation ---- */
+    const form = document.getElementById('leadForm');
+    const successMsg = document.getElementById('success-message');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let valid = true;
+      successMsg.classList.add('hidden');
+
+      const fields = [
+        { id: 'fullName', message: 'Full Name is required.' },
+        { id: 'email', message: 'Please enter a valid email address.' },
+        { id: 'message', message: 'Message is required.' }
+      ];
+
+      fields.forEach(({ id, message }) => {
+        const input = document.getElementById(id);
+        const errorText = input.parentElement.querySelector('p');
+
+        if (!input.checkValidity()) {
+          valid = false;
+          input.setAttribute('aria-invalid', 'true');
+          errorText.textContent = message;
+          errorText.classList.remove('hidden');
+        } else {
+          input.setAttribute('aria-invalid', 'false');
+          errorText.textContent = '';
+          errorText.classList.add('hidden');
+        }
+      });
+
+      if (valid) {
+        successMsg.classList.remove('hidden');
+        form.reset();
+      }
+    });
+  </script>
+
+</body>
+</html>
